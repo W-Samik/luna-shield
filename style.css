@@ -1,0 +1,158 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background-color: #f4f7f6;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align top */
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+.upload-section {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Space between items */
+}
+
+.file-label {
+  display: inline-block; /* Allows styling like a button */
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.file-label:hover {
+  background-color: #2980b9;
+}
+
+/* Hide the default file input visually but keep it accessible */
+.file-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+/* Style the button */
+#analyzeButton {
+  padding: 12px 25px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+#analyzeButton:hover {
+  background-color: #27ae60;
+}
+
+#analyzeButton:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Status Area Styling */
+.status {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.status.loading {
+  background-color: #eaf2f8; /* Light blue */
+  color: #3498db;
+  border: 1px solid #aed6f1;
+}
+
+.status.error {
+  background-color: #fdedec; /* Light red */
+  color: #c0392b;
+  border: 1px solid #f5b7b1;
+}
+
+/* Results Area Styling */
+.results {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-align: left; /* Align text left within the results */
+  background-color: #fdfefe;
+}
+
+.results h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #34495e;
+}
+
+.results hr {
+    border: 0;
+    height: 1px;
+    background-color: #eee;
+    margin: 15px 0;
+}
+
+.results p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.results strong {
+    color: #333;
+}
+
+/* Verdict specific styling */
+.verdict {
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block; /* Allows padding and background */
+}
+
+.verdict-Real {
+    background-color: #d5f5e3; /* Light green */
+    color: #1e8449;
+}
+
+.verdict-Deepfake,
+.verdict-Inconclusive,
+.verdict-Undetermined {
+    background-color: #f5b7b1; /* Light red */
+    color: #922b21;
+}
+.verdict-Inconclusive {
+    background-color: #fdebd0; /* Light yellow/orange */
+    color: #b9770e;
+}
